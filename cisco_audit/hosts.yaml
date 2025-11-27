@@ -1,0 +1,19 @@
+---
+R1:
+  hostname: "192.168.1.1"
+  groups: ["cisco_os"]
+R2:
+  hostname: "192.168.1.2"
+  groups: ["cisco_os"]
+
+# Define credentials/platform in a default or group section
+groups:
+  cisco_os:
+    platform: "cisco_ios"
+    username: "admin"
+    password: "password"
+    connection_options:
+      netmiko:
+        extras:
+          secret: "secret" # Enable password
+...
