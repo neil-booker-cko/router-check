@@ -1,0 +1,23 @@
+---
+# Define checks for BGP
+bgp:
+  local_asn: 65001
+  neighbors:
+    - ip: "10.2.2.2"
+      remote_asn: 65002
+      state: "Established"
+
+# Define checks for OSPF
+ospf:
+  neighbors:
+    - interface: "GigabitEthernet1"
+      neighbor_id: "2.2.2.2"
+      state: "FULL"
+  router_id: "1.1.1.1"
+
+# Define the checks for the routing table
+static_routes:
+  - next_hop: "10.1.1.2"
+    prefix: "192.168.10.0/24"
+    protocol: "static"
+...

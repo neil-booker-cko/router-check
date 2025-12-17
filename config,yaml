@@ -1,10 +1,10 @@
 ---
 inventory:
-  plugin: SimpleInventory
   options:
     host_file: "hosts.yaml"
+  plugin: SimpleInventory
 runner:
-  plugin: threaded
   options:
     num_workers: 20  # Runs 20 devices in parallel
+  plugin: threaded
 ...
